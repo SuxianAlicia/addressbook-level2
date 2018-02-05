@@ -14,7 +14,7 @@ public class Address {
             + "a/BLOCK, STREET, UNIT, POSTAL_CODE";
     public static final String ADDRESS_VALIDATION_REGEX = ".+";
 
-    public final String value;
+
     private boolean isPrivate;
 
     private Block blockNumber;
@@ -34,45 +34,48 @@ public class Address {
         if (!isValidAddress(trimmedAddress)) {
             throw new IllegalValueException(MESSAGE_ADDRESS_CONSTRAINTS);
         }
-        splitAddress(trimmedAddress);
-        this.value = trimmedAddress;
+        splitAndStoreAddress(trimmedAddress);
     }
 
     /**
      * Returns true if a given string is a valid person address.
      */
     public static boolean isValidAddress(String test) {
-        return test.matches(ADDRESS_VALIDATION_REGEX);
+        String[] addressComponents = test.split(", ");
+
+        return addressComponents.length == 4;
     }
 
     @Override
     public String toString() {
-        return value;
+        String addressString = blockNumber.getBlockNumber() + ", "
+                + streetName.getStreetNumber() + ", "
+                + unitNumber.getUnitNumber() + ", "
+                + postalCode.getPostalCode();
+        return addressString;
     }
 
     @Override
     public boolean equals(Object other) {
         return other == this // short circuit if same object
                 || (other instanceof Address // instanceof handles nulls
-                && this.value.equals(((Address) other).value)); // state check
+                && this.toString().equals(((Address) other).toString())); // state check
     }
 
     @Override
-    public int hashCode() {
-        return value.hashCode();
-    }
+    public int hashCode() { return this.toString().hashCode(); }
 
     public boolean isPrivate() {
         return isPrivate;
     }
 
     /**
-     * Splits address into classes Block, Street, Unit and Postal Code, each storing the string their respective
-     * address component.
+     * Splits and stores address into classes Block, Street, Unit and Postal Code,
+     * each storing the string their respective address component.
      *
      * @param address of person in correct format of a/BLOCK, STREET, UNIT, POSTAL_CODE
      */
-    public void splitAddress(String address) {
+    public void splitAndStoreAddress(String address) {
         String[] addressComponents = address.split(", ");
         blockNumber = new Block(addressComponents[0]);
         streetName = new Street(addressComponents[1]);
