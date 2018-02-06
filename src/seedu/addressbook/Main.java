@@ -42,7 +42,6 @@ public class Main {
         start(launchArgs);
         runCommandLoopUntilExitCommand();
         exit();
-
     }
 
     /**
