@@ -91,7 +91,7 @@ public class Main {
                 ui.showResultToUser(result);
             }
             catch (RuntimeException e) {
-                System.out.println("|| Kindly check if storage file does not have \"Read-Only\" attribute.");
+                System.out.println("|| Kindly check if the above file does not have \"Read-Only\" attribute.");
                 continue;
             }
 
