@@ -42,6 +42,7 @@ public class Main {
         start(launchArgs);
         runCommandLoopUntilExitCommand();
         exit();
+
     }
 
     /**
@@ -79,14 +80,20 @@ public class Main {
     }
 
     /** Reads the user command and executes it, until the user issues the exit command.  */
-    private void runCommandLoopUntilExitCommand() {
+    private void runCommandLoopUntilExitCommand() throws RuntimeException {
         Command command;
         do {
             String userCommandText = ui.getUserCommand();
             command = new Parser().parseCommand(userCommandText);
-            CommandResult result = executeCommand(command);
-            recordResult(result);
-            ui.showResultToUser(result);
+            try {
+                CommandResult result = executeCommand(command);
+                recordResult(result);
+                ui.showResultToUser(result);
+            }
+            catch (RuntimeException e) {
+                System.out.println("|| Kindly check if storage file does not have \"Read-Only\" attribute.");
+                continue;
+            }
 
         } while (!ExitCommand.isExit(command));
     }
