@@ -1,6 +1,10 @@
 package seedu.addressbook.data.person;
 
 import seedu.addressbook.data.exception.IllegalValueException;
+import seedu.addressbook.data.person.addressComponents.Block;
+import seedu.addressbook.data.person.addressComponents.PostalCode;
+import seedu.addressbook.data.person.addressComponents.Street;
+import seedu.addressbook.data.person.addressComponents.Unit;
 
 /**
  * Represents a Person's address in the address book.
@@ -13,6 +17,10 @@ public class Address {
     public static final String MESSAGE_ADDRESS_CONSTRAINTS = "Person addresses must be in format: "
             + "a/BLOCK, STREET, UNIT, POSTAL_CODE";
     public static final String ADDRESS_VALIDATION_REGEX = ".+";
+    private static final int ADDRESS_INDEX_BLOCK = 0;
+    private static final int ADDRESS_INDEX_STREET = 1;
+    private static final int ADDRESS_INDEX_UNIT = 2;
+    private static final int ADDRESS_INDEX_POSTAL_CODE = 3;
 
 
     private boolean isPrivate;
@@ -77,10 +85,10 @@ public class Address {
      */
     public void splitAndStoreAddress(String address) {
         String[] addressComponents = address.split(", ");
-        blockNumber = new Block(addressComponents[0]);
-        streetName = new Street(addressComponents[1]);
-        unitNumber = new Unit(addressComponents[2]);
-        postalCode = new PostalCode(addressComponents[3]);
+        blockNumber = new Block(addressComponents[ADDRESS_INDEX_BLOCK]);
+        streetName = new Street(addressComponents[ADDRESS_INDEX_STREET]);
+        unitNumber = new Unit(addressComponents[ADDRESS_INDEX_UNIT]);
+        postalCode = new PostalCode(addressComponents[ADDRESS_INDEX_POSTAL_CODE]);
 
     }
 }
