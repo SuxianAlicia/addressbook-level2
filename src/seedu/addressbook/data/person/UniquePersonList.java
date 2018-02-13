@@ -29,6 +29,7 @@ public class UniquePersonList implements Iterable<Person> {
         }
     }
 
+    public static class EmptyListException extends Exception {}
     /**
      * Signals that an operation targeting a specified person in the list would fail because
      * there is no such matching person in the list.
@@ -139,5 +140,9 @@ public class UniquePersonList implements Iterable<Person> {
         return other == this // short circuit if same object
                 || (other instanceof UniquePersonList // instanceof handles nulls
                         && this.internalList.equals(((UniquePersonList) other).internalList));
+    }
+
+    public void sortList() {
+        Collections.sort(internalList);
     }
 }
