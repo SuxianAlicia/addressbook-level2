@@ -87,6 +87,6 @@ public class Person implements ReadOnlyPerson, Comparable<Person> {
 
     @Override
     public int compareTo(Person o) {
-        return this.getName().toString().compareTo(o.getName().toString());
+        return (this.getName().toString()).compareTo(o.getName().toString());
     }
 }

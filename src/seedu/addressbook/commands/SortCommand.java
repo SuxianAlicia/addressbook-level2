@@ -1,6 +1,11 @@
 package seedu.addressbook.commands;
 
+import seedu.addressbook.data.AddressBook;
 import seedu.addressbook.data.person.ReadOnlyPerson;
+import seedu.addressbook.data.person.UniquePersonList;
+import sun.invoke.empty.Empty;
+
+import java.util.List;
 
 /**
  *
@@ -15,22 +20,19 @@ public class SortCommand extends Command {
             + ": Sorts and displays all persons in the address book according to lexicographical order of their names.\n"
             + "Example: " + COMMAND_WORD;
 
-    public static final String MESSAGE_SUCCESS = "Successfully sorted the list.";
-    public static final String MESSAGE_FAIL = "Sorting failed. There are no entries in addressbook.";
+    private static final String MESSAGE_SUCCESS = "Successfully sorted the list.\n";
 
 
-    public CommandResult executeSortCommand() {
-        try {
-            executeSort();
-        }
-        catch (Exception e) {
-            return new CommandResult(MESSAGE_FAIL);
-        }
-        return new ListCommand().execute();
+    public CommandResult execute() {
+        executeSort();
+
+        List<ReadOnlyPerson> allPersons = addressBook.getAllPersons().immutableListView();
+        return new CommandResult(MESSAGE_SUCCESS.concat(getMessageForPersonListShownSummary(allPersons)), allPersons);
+
     }
 
-    private void executeSort() throws Exception {
-        
+    private void executeSort() {
+        addressBook.sortPersons();
     }
 
 }
