@@ -142,6 +142,9 @@ public class UniquePersonList implements Iterable<Person> {
                         && this.internalList.equals(((UniquePersonList) other).internalList));
     }
 
+    /**
+     * Sorts list of persons according to lexicographical order.
+     */
     public void sortList() {
         Collections.sort(internalList);
     }

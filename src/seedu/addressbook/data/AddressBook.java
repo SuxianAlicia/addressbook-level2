@@ -129,6 +129,9 @@ public class AddressBook {
                         && this.allTags.equals(((AddressBook) other).allTags));
     }
 
+    /**
+     * Sorts list of all person currently stored in addressbook, according to lexicographical order.
+     */
     public void sortPersons() {
         allPersons.sortList();
     }
