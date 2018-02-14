@@ -42,6 +42,11 @@ public class Parser {
                     + " (?<isAddressPrivate>p?)a/(?<address>[^/]+)"
                     + "(?<tagArguments>(?: t/[^/]+)*)"); // variable number of tags
 
+    /**
+     * Indicates index of orignal tag name and new tag name in rename tag command.
+     */
+    private static final int TAG_INDEX_ORIGINAL = 0;
+    private static final int TAG_INDEX_NEW = 1;
 
 
     /**
@@ -269,7 +274,7 @@ public class Parser {
         }
         else {
             try {
-                return new RenameTagCommand(separateTags[0], separateTags[1]);
+                return new RenameTagCommand(separateTags[TAG_INDEX_ORIGINAL], separateTags[TAG_INDEX_NEW]);
             }
             catch (IllegalValueException ive) {
                 return new IncorrectCommand(ive.getMessage());
