@@ -18,8 +18,8 @@ public class RenameTagCommand extends Command {
             + "Example: " + COMMAND_WORD
             + "friends buddies";
 
-    public static final String MESSAGE_SUCCESS = "Successfully changed ?? to ??";
-    public static final String MESSAGE_FAIL = "?? does not exist";
+    public static final String MESSAGE_SUCCESS = "Successfully changed %1$s to %2$s";
+    public static final String MESSAGE_FAIL = "%1$s does not exist";
 
     private final Tag originalTag;
     private final Tag newTag;
@@ -31,10 +31,10 @@ public class RenameTagCommand extends Command {
 
     public CommandResult execute() {
         if (!addressBook.checkAndReplaceTag(originalTag, newTag)) {
-            return new CommandResult(MESSAGE_FAIL);
+            return new CommandResult(String.format(MESSAGE_FAIL, originalTag.getTagName()));
         }
         else {
-            return new CommandResult(MESSAGE_SUCCESS);
+            return new CommandResult(String.format(MESSAGE_SUCCESS, (originalTag.getTagName()), (newTag.getTagName())));
         }
 
     }

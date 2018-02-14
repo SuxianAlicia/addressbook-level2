@@ -50,4 +50,12 @@ public class Tag {
         return '[' + tagName + ']';
     }
 
+    /**
+     *
+     * @return tagName without the brackets
+     */
+    public String getTagName() {
+        return tagName;
+    }
+
 }
