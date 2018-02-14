@@ -19,6 +19,9 @@
 || Example: find alice bob charlie
 || list: Displays all persons in the address book as a list with index numbers.
 || Example: list
+|| renametag: Renames existing tag with a name given by user, and all persons in addressbook with the original tag will have the new tag name.
+|| Parameters: TAG_TO_RENAME TAG_NEW_NAME
+|| Example: renametag friends buddies
 || view: Views the non-private details of the person identified by the index number in the last shown person listing.
 || Parameters: INDEX
 || Example: view 1
@@ -138,6 +141,54 @@
 || Enter command: || [Command entered:  add Esther Potato p/555555 e/esther@not.a.real.potato pa/555, epsilon street t/tubers t/starchy]
 || This person already exists in the address book
 || ===================================================
+|| Enter command: || [Command entered:  renametag]
+|| Invalid command format! 
+|| renametag: Renames existing tag with a name given by user, and all persons in addressbook with the original tag will have the new tag name.
+|| Parameters: TAG_TO_RENAME TAG_NEW_NAME
+|| Example: renametag friends buddies
+|| ===================================================
+|| Enter command: || [Command entered:  renametag one]
+|| Invalid command format! 
+|| renametag: Renames existing tag with a name given by user, and all persons in addressbook with the original tag will have the new tag name.
+|| Parameters: TAG_TO_RENAME TAG_NEW_NAME
+|| Example: renametag friends buddies
+|| ===================================================
+|| Enter command: || [Command entered:  renametag one two three]
+|| Invalid command format! 
+|| renametag: Renames existing tag with a name given by user, and all persons in addressbook with the original tag will have the new tag name.
+|| Parameters: TAG_TO_RENAME TAG_NEW_NAME
+|| Example: renametag friends buddies
+|| ===================================================
+|| Enter command: || [Command entered:  renametag bestFriend besties]
+|| bestFriend does not exist
+|| ===================================================
+|| Enter command: || [Command entered:  renametag tubers potato]
+|| Successfully changed tubers to potato
+|| ===================================================
+|| Enter command: || [Command entered:  renametag friends besties]
+|| Successfully changed friends to besties
+|| ===================================================
+|| Enter command: || [Command entered:  list]
+|| 	1. Adam Brown Phone: 111111 Email: adam@gmail.com Address: 111, alpha street Tags: 
+|| 	2. Betsy Choo Tags: [secretive]
+|| 	3. Charlie Dickson Email: charlie.d@nus.edu.sg Address: 333, gamma street Tags: [besties][school]
+|| 	4. Dickson Ee Phone: 444444 Address: 444, delta street Tags: [besties]
+|| 	5. Esther Potato Phone: 555555 Email: esther@not.a.real.potato Tags: [potato][starchy]
+|| 
+|| 5 persons listed!
+|| ===================================================
+|| Enter command: || [Command entered:  renametag potato starchy]
+|| Successfully changed potato to starchy
+|| ===================================================
+|| Enter command: || [Command entered:  list]
+|| 	1. Adam Brown Phone: 111111 Email: adam@gmail.com Address: 111, alpha street Tags: 
+|| 	2. Betsy Choo Tags: [secretive]
+|| 	3. Charlie Dickson Email: charlie.d@nus.edu.sg Address: 333, gamma street Tags: [besties][school]
+|| 	4. Dickson Ee Phone: 444444 Address: 444, delta street Tags: [besties]
+|| 	5. Esther Potato Phone: 555555 Email: esther@not.a.real.potato Tags: [starchy]
+|| 
+|| 5 persons listed!
+|| ===================================================
 || Enter command: || [Command entered:  view]
 || Invalid command format! 
 || view: Views the non-private details of the person identified by the index number in the last shown person listing.
@@ -181,22 +232,22 @@
 || Viewing person: Adam Brown Phone: 111111 Email: adam@gmail.com Address: 111, alpha street Tags: 
 || ===================================================
 || Enter command: || [Command entered:  view 3]
-|| Viewing person: Charlie Dickson Email: charlie.d@nus.edu.sg Address: 333, gamma street Tags: [school][friends]
+|| Viewing person: Charlie Dickson Email: charlie.d@nus.edu.sg Address: 333, gamma street Tags: [besties][school]
 || ===================================================
 || Enter command: || [Command entered:  view 4]
-|| Viewing person: Dickson Ee Phone: 444444 Address: 444, delta street Tags: [friends]
+|| Viewing person: Dickson Ee Phone: 444444 Address: 444, delta street Tags: [besties]
 || ===================================================
 || Enter command: || [Command entered:  view 5]
-|| Viewing person: Esther Potato Phone: 555555 Email: esther@not.a.real.potato Tags: [tubers][starchy]
+|| Viewing person: Esther Potato Phone: 555555 Email: esther@not.a.real.potato Tags: [starchy]
 || ===================================================
 || Enter command: || [Command entered:  viewall 3]
-|| Viewing person: Charlie Dickson Phone: (private) 333333 Email: charlie.d@nus.edu.sg Address: 333, gamma street Tags: [school][friends]
+|| Viewing person: Charlie Dickson Phone: (private) 333333 Email: charlie.d@nus.edu.sg Address: 333, gamma street Tags: [besties][school]
 || ===================================================
 || Enter command: || [Command entered:  viewall 4]
-|| Viewing person: Dickson Ee Phone: 444444 Email: (private) dickson@nus.edu.sg Address: 444, delta street Tags: [friends]
+|| Viewing person: Dickson Ee Phone: 444444 Email: (private) dickson@nus.edu.sg Address: 444, delta street Tags: [besties]
 || ===================================================
 || Enter command: || [Command entered:  viewall 5]
-|| Viewing person: Esther Potato Phone: 555555 Email: esther@not.a.real.potato Address: (private) 555, epsilon street Tags: [tubers][starchy]
+|| Viewing person: Esther Potato Phone: 555555 Email: esther@not.a.real.potato Address: (private) 555, epsilon street Tags: [starchy]
 || ===================================================
 || Enter command: || [Command entered:  find]
 || Invalid command format! 
@@ -222,14 +273,14 @@
 || 1 persons listed!
 || ===================================================
 || Enter command: || [Command entered:  find Dickson]
-|| 	1. Charlie Dickson Email: charlie.d@nus.edu.sg Address: 333, gamma street Tags: [school][friends]
-|| 	2. Dickson Ee Phone: 444444 Address: 444, delta street Tags: [friends]
+|| 	1. Charlie Dickson Email: charlie.d@nus.edu.sg Address: 333, gamma street Tags: [besties][school]
+|| 	2. Dickson Ee Phone: 444444 Address: 444, delta street Tags: [besties]
 || 
 || 2 persons listed!
 || ===================================================
 || Enter command: || [Command entered:  find Charlie Betsy]
 || 	1. Betsy Choo Tags: [secretive]
-|| 	2. Charlie Dickson Email: charlie.d@nus.edu.sg Address: 333, gamma street Tags: [school][friends]
+|| 	2. Charlie Dickson Email: charlie.d@nus.edu.sg Address: 333, gamma street Tags: [besties][school]
 || 
 || 2 persons listed!
 || ===================================================
@@ -252,7 +303,7 @@
 || The person index provided is invalid
 || ===================================================
 || Enter command: || [Command entered:  delete 2]
-|| Deleted Person: Charlie Dickson Phone: (private) 333333 Email: charlie.d@nus.edu.sg Address: 333, gamma street Tags: [school][friends]
+|| Deleted Person: Charlie Dickson Phone: (private) 333333 Email: charlie.d@nus.edu.sg Address: 333, gamma street Tags: [besties][school]
 || ===================================================
 || Enter command: || [Command entered:  delete 2]
 || Person could not be found in address book
@@ -266,18 +317,18 @@
 || Enter command: || [Command entered:  list]
 || 	1. Adam Brown Phone: 111111 Email: adam@gmail.com Address: 111, alpha street Tags: 
 || 	2. Betsy Choo Tags: [secretive]
-|| 	3. Dickson Ee Phone: 444444 Address: 444, delta street Tags: [friends]
-|| 	4. Esther Potato Phone: 555555 Email: esther@not.a.real.potato Tags: [tubers][starchy]
+|| 	3. Dickson Ee Phone: 444444 Address: 444, delta street Tags: [besties]
+|| 	4. Esther Potato Phone: 555555 Email: esther@not.a.real.potato Tags: [starchy]
 || 
 || 4 persons listed!
 || ===================================================
 || Enter command: || [Command entered:  delete 4]
-|| Deleted Person: Esther Potato Phone: 555555 Email: esther@not.a.real.potato Address: (private) 555, epsilon street Tags: [tubers][starchy]
+|| Deleted Person: Esther Potato Phone: 555555 Email: esther@not.a.real.potato Address: (private) 555, epsilon street Tags: [starchy]
 || ===================================================
 || Enter command: || [Command entered:  list]
 || 	1. Adam Brown Phone: 111111 Email: adam@gmail.com Address: 111, alpha street Tags: 
 || 	2. Betsy Choo Tags: [secretive]
-|| 	3. Dickson Ee Phone: 444444 Address: 444, delta street Tags: [friends]
+|| 	3. Dickson Ee Phone: 444444 Address: 444, delta street Tags: [besties]
 || 
 || 3 persons listed!
 || ===================================================
@@ -286,7 +337,7 @@
 || ===================================================
 || Enter command: || [Command entered:  list]
 || 	1. Betsy Choo Tags: [secretive]
-|| 	2. Dickson Ee Phone: 444444 Address: 444, delta street Tags: [friends]
+|| 	2. Dickson Ee Phone: 444444 Address: 444, delta street Tags: [besties]
 || 
 || 2 persons listed!
 || ===================================================

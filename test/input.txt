@@ -59,6 +59,27 @@
 ##########################################################
 
   # should catch invalid args format
+  renametag
+  renametag one
+  renametag one two three
+
+# should catch non-existing tags
+  renametag bestFriend besties
+
+# should rename old tag with new tag name for all persons with old tag
+  renametag tubers potato
+  renametag friends besties
+  list
+
+# should not have duplicates of new tag if new tag already exists
+  renametag potato starchy
+  list
+
+##########################################################
+# test view/viewall persons command
+##########################################################
+
+  # should catch invalid args format
   view
   viewall
   view should be only one number
