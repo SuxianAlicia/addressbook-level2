@@ -135,8 +135,47 @@
 || 
 || 5 persons listed!
 || ===================================================
+|| Enter command: || [Command entered:  add Carissa Beh p/666666 e/carissa@gmail.com a/666, campbell street t/friends]
+|| New person added: Carissa Beh Phone: 666666 Email: carissa@gmail.com Address: 666, campbell street Tags: [friends]
+|| ===================================================
+|| Enter command: || [Command entered:  list]
+|| 	1. Adam Brown Phone: 111111 Email: adam@gmail.com Address: 111, alpha street Tags:
+|| 	2. Betsy Choo Tags: [secretive]
+|| 	3. Charlie Dickson Email: charlie.d@nus.edu.sg Address: 333, gamma street Tags: [school][friends]
+|| 	4. Dickson Ee Phone: 444444 Address: 444, delta street Tags: [friends]
+|| 	5. Esther Potato Phone: 555555 Email: esther@not.a.real.potato Tags: [tubers][starchy]
+||  6. Carissa Beh Phone: 666666 Email: carissa@gmail.com Address: 666, campbell street Tags: [friends]
+||
+|| 6 persons listed!
+ ===================================================
+|| Enter command: || [Command entered:  add Aaron Chan p/7777777 e/aaron@hotmail.com a/777, arab street t/besties
+|| New person added: Aaron Chan Phone: 7777777 Email: aaron@hotmail.com Address: 777, arab street Tags: [besties]
+|| ===================================================
+|| Enter command: || [Command entered:  list]
+|| 	1. Adam Brown Phone: 111111 Email: adam@gmail.com Address: 111, alpha street Tags:
+|| 	2. Betsy Choo Tags: [secretive]
+|| 	3. Charlie Dickson Email: charlie.d@nus.edu.sg Address: 333, gamma street Tags: [school][friends]
+|| 	4. Dickson Ee Phone: 444444 Address: 444, delta street Tags: [friends]
+|| 	5. Esther Potato Phone: 555555 Email: esther@not.a.real.potato Tags: [tubers][starchy]
+||  6. Carissa Beh Phone: 666666 Email: carissa@gmail.com Address: 666, campbell street Tags: [friends]
+||  7. Aaron Chan Phone: 7777777 Email: aaron@hotmail.com Address: 777, arab street Tags: [besties]
+||
+|| 7 persons listed!
+|| ===================================================
 || Enter command: || [Command entered:  add Esther Potato p/555555 e/esther@not.a.real.potato pa/555, epsilon street t/tubers t/starchy]
 || This person already exists in the address book
+|| ===================================================
+|| Enter command: || [Command entered:  sort]
+|| 	1. Aaron Chan Phone: 7777777 Email: aaron@hotmail.com Address: 777, arab street Tags: [besties]
+|| 	2. Adam Brown Phone: 111111 Email: adam@gmail.com Address: 111, alpha street Tags:
+|| 	3. Betsy Choo Tags: [secretive]
+|| 	4. Carissa Beh Phone: 666666 Email: carissa@gmail.com Address: 666, campbell street Tags: [friends]
+|| 	5. Charlie Dickson Email: charlie.d@nus.edu.sg Address: 333, gamma street Tags: [school][friends]
+||  6. Dickson Ee Phone: 444444 Address: 444, delta street Tags: [friends]
+||  7. Esther Potato Phone: 555555 Email: esther@not.a.real.potato Tags: [tubers][starchy]
+||
+|| Successfully sorted the list.
+|| 7 persons listed!
 || ===================================================
 || Enter command: || [Command entered:  view]
 || Invalid command format! 
@@ -162,7 +201,7 @@
 || Enter command: || [Command entered:  view 0]
 || The person index provided is invalid
 || ===================================================
-|| Enter command: || [Command entered:  view 6]
+|| Enter command: || [Command entered:  view 8]
 || The person index provided is invalid
 || ===================================================
 || Enter command: || [Command entered:  viewall -1]
@@ -175,27 +214,27 @@
 || The person index provided is invalid
 || ===================================================
 || Enter command: || [Command entered:  view 1]
-|| Viewing person: Adam Brown Phone: 111111 Email: adam@gmail.com Address: 111, alpha street Tags: 
+|| Viewing person: Aaron Chan Phone: 7777777 Email: aaron@hotmail.com Address: 777, arab street Tags: [besties]
 || ===================================================
 || Enter command: || [Command entered:  viewall 1]
-|| Viewing person: Adam Brown Phone: 111111 Email: adam@gmail.com Address: 111, alpha street Tags: 
-|| ===================================================
-|| Enter command: || [Command entered:  view 3]
-|| Viewing person: Charlie Dickson Email: charlie.d@nus.edu.sg Address: 333, gamma street Tags: [school][friends]
-|| ===================================================
-|| Enter command: || [Command entered:  view 4]
-|| Viewing person: Dickson Ee Phone: 444444 Address: 444, delta street Tags: [friends]
+|| Viewing person: Aaron Chan Phone: 7777777 Email: aaron@hotmail.com Address: 777, arab street Tags: [besties]
 || ===================================================
 || Enter command: || [Command entered:  view 5]
+|| Viewing person: Charlie Dickson Email: charlie.d@nus.edu.sg Address: 333, gamma street Tags: [school][friends]
+|| ===================================================
+|| Enter command: || [Command entered:  view 6]
+|| Viewing person: Dickson Ee Phone: 444444 Address: 444, delta street Tags: [friends]
+|| ===================================================
+|| Enter command: || [Command entered:  view 7]
 || Viewing person: Esther Potato Phone: 555555 Email: esther@not.a.real.potato Tags: [tubers][starchy]
 || ===================================================
-|| Enter command: || [Command entered:  viewall 3]
+|| Enter command: || [Command entered:  viewall 5]
 || Viewing person: Charlie Dickson Phone: (private) 333333 Email: charlie.d@nus.edu.sg Address: 333, gamma street Tags: [school][friends]
 || ===================================================
-|| Enter command: || [Command entered:  viewall 4]
+|| Enter command: || [Command entered:  viewall 6]
 || Viewing person: Dickson Ee Phone: 444444 Email: (private) dickson@nus.edu.sg Address: 444, delta street Tags: [friends]
 || ===================================================
-|| Enter command: || [Command entered:  viewall 5]
+|| Enter command: || [Command entered:  viewall 7]
 || Viewing person: Esther Potato Phone: 555555 Email: esther@not.a.real.potato Address: (private) 555, epsilon street Tags: [tubers][starchy]
 || ===================================================
 || Enter command: || [Command entered:  find]
@@ -264,37 +303,48 @@
 || Person could not be found in address book
 || ===================================================
 || Enter command: || [Command entered:  list]
-|| 	1. Adam Brown Phone: 111111 Email: adam@gmail.com Address: 111, alpha street Tags: 
-|| 	2. Betsy Choo Tags: [secretive]
-|| 	3. Dickson Ee Phone: 444444 Address: 444, delta street Tags: [friends]
-|| 	4. Esther Potato Phone: 555555 Email: esther@not.a.real.potato Tags: [tubers][starchy]
+|| 	1. 1. Aaron Chan Phone: 7777777 Email: aaron@hotmail.com Address: 777, arab street Tags: [besties]
+|| 	2. Adam Brown Phone: 111111 Email: adam@gmail.com Address: 111, alpha street Tags:
+|| 	3. Betsy Choo Tags: [secretive]
+|| 	4. Carissa Beh Phone: 666666 Email: carissa@gmail.com Address: 666, campbell street Tags: [friends]
+||  5. Dickson Ee Phone: 444444 Address: 444, delta street Tags: [friends]
+||  6. Esther Potato Phone: 555555 Email: esther@not.a.real.potato Tags: [tubers][starchy]
 || 
-|| 4 persons listed!
+|| 6 persons listed!
 || ===================================================
-|| Enter command: || [Command entered:  delete 4]
+|| Enter command: || [Command entered:  delete 6]
 || Deleted Person: Esther Potato Phone: 555555 Email: esther@not.a.real.potato Address: (private) 555, epsilon street Tags: [tubers][starchy]
 || ===================================================
 || Enter command: || [Command entered:  list]
-|| 	1. Adam Brown Phone: 111111 Email: adam@gmail.com Address: 111, alpha street Tags: 
-|| 	2. Betsy Choo Tags: [secretive]
-|| 	3. Dickson Ee Phone: 444444 Address: 444, delta street Tags: [friends]
+|| 	1. Aaron Chan Phone: 7777777 Email: aaron@hotmail.com Address: 777, arab street Tags: [besties]
+|| 	2. Adam Brown Phone: 111111 Email: adam@gmail.com Address: 111, alpha street Tags:
+|| 	3. Betsy Choo Tags: [secretive]
+|| 	4. Carissa Beh Phone: 666666 Email: carissa@gmail.com Address: 666, campbell street Tags: [friends]
+||  5. Dickson Ee Phone: 444444 Address: 444, delta street Tags: [friends]
 || 
-|| 3 persons listed!
+|| 5 persons listed!
 || ===================================================
 || Enter command: || [Command entered:  delete 1]
-|| Deleted Person: Adam Brown Phone: 111111 Email: adam@gmail.com Address: 111, alpha street Tags: 
+|| Deleted Person: Aaron Chan Phone: 7777777 Email: aaron@hotmail.com Address: 777, arab street Tags: [besties]
 || ===================================================
 || Enter command: || [Command entered:  list]
-|| 	1. Betsy Choo Tags: [secretive]
-|| 	2. Dickson Ee Phone: 444444 Address: 444, delta street Tags: [friends]
+|| 	1. Adam Brown Phone: 111111 Email: adam@gmail.com Address: 111, alpha street Tags:
+|| 	2. Betsy Choo Tags: [secretive]
+|| 	3. Carissa Beh Phone: 666666 Email: carissa@gmail.com Address: 666, campbell street Tags: [friends]
+||  4. Dickson Ee Phone: 444444 Address: 444, delta street Tags: [friends]
 || 
-|| 2 persons listed!
+|| 4 persons listed!
 || ===================================================
 || Enter command: || [Command entered:  clear]
 || Address book has been cleared!
 || ===================================================
 || Enter command: || [Command entered:  list]
 || 
+|| 0 persons listed!
+|| ===================================================
+|| Enter command: || [Command entered:  sort]
+||
+|| Successfully sorted the list.
 || 0 persons listed!
 || ===================================================
 || Enter command: || [Command entered:  exit]
