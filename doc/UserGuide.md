@@ -24,6 +24,7 @@ Please refer to the [Setting up](DeveloperGuide.md#setting-up) section to learn 
 
 #### Changes from level 1
 What's different from AddressBook-Level1:
+* Added new function to rename existing tags.
 * Support for storing address (`a/`) and tags (`t/`)
 * Support for marking a contact detail as 'private' (`pa/`) (`pe/`) (`pp/`) 
 * View details of a person (`view` : shows non-private details), (`viewall` : shows all details)
@@ -80,6 +81,14 @@ Examples:
 * `find Betsy`<br> 
   `delete 1`<br>
   Deletes the 1st person in the results of the `find` command.
+
+### Renames existing tag : `renametag`
+Renames an existing tag with a given name. <br>
+Format: `renametag ORIGINAL_TAG NEW_TAG`
+
+Examples:
+* `renametag oldTag newTag`<br>
+  Renames oldTag of persons in the address book who has oldTag to newTag. <br>
 
 ### View non-private details of a person : `view`
 Displays the non-private details of the specified person.<br>
