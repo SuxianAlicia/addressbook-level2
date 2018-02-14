@@ -65,7 +65,7 @@ public class Formatter {
     }
 
     public String formatRepeatedUserCommand(String userInput) {
-        return "[Command entered:" + userInput + "]";
+        return LINE_PREFIX + "[Command entered:" + userInput + "]";
     }
 
     /** Formats a list of strings as a viewable indexed list. */
@@ -89,7 +89,12 @@ public class Formatter {
     }
 
     public String formatErrorMessage(String message) {
+
         return LINE_PREFIX + message.replace("\n", LS + LINE_PREFIX);
     }
 
+
+    public ArrayList<String> formatResultForUser(String feedbackToUser) {
+        return formatMessageForUser(feedbackToUser, DIVIDER);
+    }
 }
