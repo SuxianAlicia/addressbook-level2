@@ -12,8 +12,6 @@ public class Phone extends Contact {
     public static final String MESSAGE_PHONE_CONSTRAINTS = "Person phone numbers should only contain numbers";
     public static final String PHONE_VALIDATION_REGEX = "\\d+";
 
-    public final String value;
-    private boolean isPrivate;
 
     /**
      * Validates given phone number.
@@ -36,10 +34,7 @@ public class Phone extends Contact {
         return test.matches(PHONE_VALIDATION_REGEX);
     }
 
-    @Override
-    public String toString() {
-        return value;
-    }
+
 
     @Override
     public boolean equals(Object other) {
@@ -48,12 +43,4 @@ public class Phone extends Contact {
                 && this.value.equals(((Phone) other).value)); // state check
     }
 
-    @Override
-    public int hashCode() {
-        return value.hashCode();
-    }
-
-    public boolean isPrivate() {
-        return isPrivate;
-    }
 }
