@@ -10,10 +10,13 @@ import java.util.Objects;
  */
 public class Person implements ReadOnlyPerson {
 
+    private static int nextSequenceNumber = 1;
+
     private Name name;
     private Phone phone;
     private Email email;
     private Address address;
+    private int sequenceNumber;
 
     private final UniqueTagList tags;
     /**
@@ -25,6 +28,7 @@ public class Person implements ReadOnlyPerson {
         this.email = email;
         this.address = address;
         this.tags = new UniqueTagList(tags); // protect internal tags from changes in the arg list
+        this.sequenceNumber = nextSequenceNumber++;
     }
 
     /**
@@ -61,6 +65,8 @@ public class Person implements ReadOnlyPerson {
 
     /**
      * Replaces this person's tags with the tags in the argument tag list.
+     * setTags cannot be a class-level method since every person's tag list can be unique
+     * from one another.
      */
     public void setTags(UniqueTagList replacement) {
         tags.setTags(replacement);
