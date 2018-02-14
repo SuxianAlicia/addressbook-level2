@@ -5,6 +5,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+import seedu.addressbook.data.exception.IllegalValueException;
 import seedu.addressbook.data.person.Person;
 import seedu.addressbook.data.person.ReadOnlyPerson;
 import seedu.addressbook.data.person.UniquePersonList;
@@ -128,4 +129,34 @@ public class AddressBook {
                         && this.allPersons.equals(((AddressBook) other).allPersons)
                         && this.allTags.equals(((AddressBook) other).allTags));
     }
+
+    /**
+     * Checks if original tag exists in master tag list
+     * and carry out replacement of the tag for all persons in addressbook.
+     *
+     * @param targetTag is the original tag to be replaced.
+     * @param newTag is the new tag to replace the original.
+     * @return true if original tag exists and all such tags have been replaced. Returns false if original tag does not
+     * exists.
+     */
+    public boolean checkAndReplaceTag(Tag targetTag, Tag newTag){
+        if (!allTags.contains(targetTag)) {
+            return false;
+        }
+        else {
+            boolean newTagExists = allTags.contains(newTag);
+
+            for(Person p: allPersons) {
+                p.checkPersonTagList(targetTag, newTag);
+                if(!newTagExists) {
+                    syncTagsWithMasterList(p);
+                    newTagExists = true;
+                }
+            }
+
+
+            return true;
+        }
+    }
+
 }

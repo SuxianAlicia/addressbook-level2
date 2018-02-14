@@ -1,7 +1,7 @@
 package seedu.addressbook.data.person;
 
 import seedu.addressbook.data.tag.UniqueTagList;
-
+import seedu.addressbook.data.tag.Tag;
 import java.util.Objects;
 
 /**
@@ -84,4 +84,15 @@ public class Person implements ReadOnlyPerson {
         return getAsTextShowAll();
     }
 
+    /**
+     * Checks if Person's tag list contains the original tag to be replaced, and replaces it if it exists.
+     *
+     * @param targetTag is the tag to be replaced
+     * @param newTag is the new tag to replace original tag
+     */
+    public void checkPersonTagList(Tag targetTag, Tag newTag) {
+        if (tags.contains(targetTag)) {
+            tags.replaceTag(targetTag, newTag);
+        }
+    }
 }

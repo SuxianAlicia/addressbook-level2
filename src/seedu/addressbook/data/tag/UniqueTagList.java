@@ -138,4 +138,21 @@ public class UniqueTagList implements Iterable<Tag> {
                         && this.internalList.equals(((UniqueTagList) other).internalList));
     }
 
+    /**
+     * Replaces original tag with the new one. If list contains the new Tag, simply delete the old Tag.
+     * Else, delete the old Tag and add the new Tag.
+     * It is guranteed that original tag exists in the list.
+     *
+     * @param targetTag is the tag to be replaced
+     * @param newTag is the new tag to replace targetTag
+     */
+
+    public void replaceTag(Tag targetTag, Tag newTag) {
+        int originalIndex = internalList.indexOf(targetTag);
+        internalList.remove(targetTag);
+        if(!internalList.contains(newTag)) {
+            internalList.add(originalIndex, newTag);
+        }
+
+    }
 }
