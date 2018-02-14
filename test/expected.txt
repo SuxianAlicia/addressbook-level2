@@ -161,7 +161,7 @@
 || 	5. Esther Potato Phone: 555555 Email: esther@not.a.real.potato Tags: [tubers][starchy]
 || 	6. Carissa Beh Phone: 666666 Email: carissa@gmail.com Address: 666, campbell street Tags: [friends]
 || 	7. Aaron Chan Phone: 7777777 Email: aaron@hotmail.com Address: 777, arab street Tags: [besties]
-||
+|| 
 || 7 persons listed!
 || ===================================================
 || Enter command: || [Command entered:  add Esther Potato p/555555 e/esther@not.a.real.potato pa/555, epsilon street t/tubers t/starchy]
@@ -175,7 +175,7 @@
 || 	5. Charlie Dickson Email: charlie.d@nus.edu.sg Address: 333, gamma street Tags: [school][friends]
 || 	6. Dickson Ee Phone: 444444 Address: 444, delta street Tags: [friends]
 || 	7. Esther Potato Phone: 555555 Email: esther@not.a.real.potato Tags: [tubers][starchy]
-||
+|| 
 || Successfully sorted the list.
 || 7 persons listed!
 || ===================================================
@@ -246,32 +246,32 @@
 || Example: find alice bob charlie
 || ===================================================
 || Enter command: || [Command entered:  find bet]
-||
+|| 
 || 0 persons listed!
 || ===================================================
 || Enter command: || [Command entered:  find 23912039120]
-||
+|| 
 || 0 persons listed!
 || ===================================================
 || Enter command: || [Command entered:  find betsy]
-||
+|| 
 || 0 persons listed!
 || ===================================================
 || Enter command: || [Command entered:  find Betsy]
 || 	1. Betsy Choo Tags: [secretive]
-||
+|| 
 || 1 persons listed!
 || ===================================================
 || Enter command: || [Command entered:  find Dickson]
 || 	1. Charlie Dickson Email: charlie.d@nus.edu.sg Address: 333, gamma street Tags: [school][friends]
 || 	2. Dickson Ee Phone: 444444 Address: 444, delta street Tags: [friends]
-||
+|| 
 || 2 persons listed!
 || ===================================================
 || Enter command: || [Command entered:  find Charlie Betsy]
 || 	1. Betsy Choo Tags: [secretive]
 || 	2. Charlie Dickson Email: charlie.d@nus.edu.sg Address: 333, gamma street Tags: [school][friends]
-||
+|| 
 || 2 persons listed!
 || ===================================================
 || Enter command: || [Command entered:  delete]
@@ -323,7 +323,7 @@
 || 	3. Betsy Choo Tags: [secretive]
 || 	4. Carissa Beh Phone: 666666 Email: carissa@gmail.com Address: 666, campbell street Tags: [friends]
 || 	5. Dickson Ee Phone: 444444 Address: 444, delta street Tags: [friends]
-||
+|| 
 || 5 persons listed!
 || ===================================================
 || Enter command: || [Command entered:  delete 1]
@@ -334,14 +334,14 @@
 || 	2. Betsy Choo Tags: [secretive]
 || 	3. Carissa Beh Phone: 666666 Email: carissa@gmail.com Address: 666, campbell street Tags: [friends]
 || 	4. Dickson Ee Phone: 444444 Address: 444, delta street Tags: [friends]
-||
+|| 
 || 4 persons listed!
 || ===================================================
 || Enter command: || [Command entered:  clear]
 || Address book has been cleared!
 || ===================================================
 || Enter command: || [Command entered:  list]
-||
+|| 
 || 0 persons listed!
 || ===================================================
 || Enter command: || [Command entered:  sort]
