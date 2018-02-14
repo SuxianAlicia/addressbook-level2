@@ -65,7 +65,8 @@ public class Formatter {
     }
 
     public String formatRepeatedUserCommand(String userInput) {
-        return LINE_PREFIX + "[Command entered:" + userInput + "]";
+        ArrayList<String> repeatedString = formatMessageForUser("[Command entered:" + userInput + "]");
+        return repeatedString.get(0);
     }
 
     /** Formats a list of strings as a viewable indexed list. */
@@ -73,9 +74,11 @@ public class Formatter {
         final StringBuilder formatted = new StringBuilder();
         int displayIndex = 0 + DISPLAYED_INDEX_OFFSET;
         for (String listItem : listItems) {
+            formatted.append(LINE_PREFIX);
             formatted.append(getIndexedListItem(displayIndex, listItem)).append("\n");
             displayIndex++;
         }
+        formatted.append(LINE_PREFIX);
         return formatted.toString();
     }
 
