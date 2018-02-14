@@ -90,9 +90,13 @@ public class Person implements ReadOnlyPerson {
      * @param targetTag is the tag to be replaced
      * @param newTag is the new tag to replace original tag
      */
-    public void checkPersonTagList(Tag targetTag, Tag newTag) {
+    public boolean checkPersonTagList(Tag targetTag, Tag newTag) {
         if (tags.contains(targetTag)) {
             tags.replaceTag(targetTag, newTag);
+            return true;
+        }
+        else {
+            return false;
         }
     }
 }

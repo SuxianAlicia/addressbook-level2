@@ -16,7 +16,7 @@ public class RenameTagCommand extends Command {
             + "tag will have the new tag name.\n"
             + "Parameters: TAG_TO_RENAME TAG_NEW_NAME\n"
             + "Example: " + COMMAND_WORD
-            + "friends buddies";
+            + " friends buddies";
 
     public static final String MESSAGE_SUCCESS = "Successfully changed %1$s to %2$s";
     public static final String MESSAGE_FAIL = "%1$s does not exist";
@@ -25,8 +25,8 @@ public class RenameTagCommand extends Command {
     private final Tag newTag;
 
     public RenameTagCommand(String oldTagName, String newTagName) throws IllegalValueException {
-            this.originalTag = new Tag(oldTagName);
-            this.newTag = new Tag(newTagName);
+            this.originalTag = new Tag(oldTagName.trim());
+            this.newTag = new Tag(newTagName.trim());
     }
 
     public CommandResult execute() {
