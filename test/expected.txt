@@ -147,7 +147,7 @@
 || 	4. Dickson Ee Phone: 444444 Address: 444, delta street Tags: [friends]
 || 	5. Esther Potato Phone: 555555 Email: esther@not.a.real.potato Tags: [tubers][starchy]
 || 	6. Carissa Beh Phone: 666666 Email: carissa@gmail.com Address: 666, campbell street Tags: [friends]
-||
+|| 
 || 6 persons listed!
 || ===================================================
 || Enter command: || [Command entered:  add Aaron Chan p/7777777 e/aaron@hotmail.com a/777, arab street t/besties]
@@ -180,13 +180,13 @@
 || 7 persons listed!
 || ===================================================
 || Enter command: || [Command entered:  view]
-|| Invalid command format!
+|| Invalid command format! 
 || view: Views the non-private details of the person identified by the index number in the last shown person listing.
 || Parameters: INDEX
 || Example: view 1
 || ===================================================
 || Enter command: || [Command entered:  viewall]
-|| Invalid command format!
+|| Invalid command format! 
 || viewall: Views the non-private details of the person identified by the index number in the last shown person listing.
 || Parameters: INDEX
 || Example: viewall 1
@@ -240,7 +240,7 @@
 || Viewing person: Esther Potato Phone: 555555 Email: esther@not.a.real.potato Address: (private) 555, epsilon street Tags: [tubers][starchy]
 || ===================================================
 || Enter command: || [Command entered:  find]
-|| Invalid command format!
+|| Invalid command format! 
 || find: Finds all persons whose names contain any of the specified keywords (case-sensitive) and displays them as a list with index numbers.
 || Parameters: KEYWORD [MORE_KEYWORDS]...
 || Example: find alice bob charlie
@@ -275,7 +275,7 @@
 || 2 persons listed!
 || ===================================================
 || Enter command: || [Command entered:  delete]
-|| Invalid command format!
+|| Invalid command format! 
 || delete: Deletes the person identified by the index number used in the last person listing.
 || Parameters: INDEX
 || Example: delete 1
@@ -311,7 +311,7 @@
 || 	4. Carissa Beh Phone: 666666 Email: carissa@gmail.com Address: 666, campbell street Tags: [friends]
 || 	5. Dickson Ee Phone: 444444 Address: 444, delta street Tags: [friends]
 || 	6. Esther Potato Phone: 555555 Email: esther@not.a.real.potato Tags: [tubers][starchy]
-||
+|| 
 || 6 persons listed!
 || ===================================================
 || Enter command: || [Command entered:  delete 6]
