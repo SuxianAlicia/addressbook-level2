@@ -20,6 +20,7 @@ import seedu.addressbook.commands.FindCommand;
 import seedu.addressbook.commands.HelpCommand;
 import seedu.addressbook.commands.IncorrectCommand;
 import seedu.addressbook.commands.ListCommand;
+import seedu.addressbook.commands.RenameTagCommand;
 import seedu.addressbook.commands.ViewAllCommand;
 import seedu.addressbook.commands.ViewCommand;
 import seedu.addressbook.data.exception.IllegalValueException;
@@ -40,6 +41,7 @@ public class Parser {
                     + " (?<isEmailPrivate>p?)e/(?<email>[^/]+)"
                     + " (?<isAddressPrivate>p?)a/(?<address>[^/]+)"
                     + "(?<tagArguments>(?: t/[^/]+)*)"); // variable number of tags
+
 
 
     /**
@@ -89,6 +91,9 @@ public class Parser {
 
         case ListCommand.COMMAND_WORD:
             return new ListCommand();
+
+        case RenameTagCommand.COMMAND_WORD:
+            return prepareRename(arguments);
 
         case ViewCommand.COMMAND_WORD:
             return prepareView(arguments);
@@ -250,5 +255,26 @@ public class Parser {
         return new FindCommand(keywordSet);
     }
 
+    /**
+     * Parses arguments in the context of rename tag command.
+     *
+     * @param args full command args string
+     * @return the prepared command
+     */
+    private Command prepareRename(String args) {
+        String[] separateTags = args.split(" ");
+        if(separateTags.length != 2) {
+            return new IncorrectCommand(String.format(MESSAGE_INVALID_COMMAND_FORMAT,
+                    RenameTagCommand.MESSAGE_USAGE));
+        }
+        else {
+            try {
+                return new RenameTagCommand(separateTags[0], separateTags[1]);
+            }
+            catch (IllegalValueException ive) {
+                return new IncorrectCommand(ive.getMessage());
+            }
+        }
+    }
 
 }
