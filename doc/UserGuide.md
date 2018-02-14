@@ -24,6 +24,7 @@ Please refer to the [Setting up](DeveloperGuide.md#setting-up) section to learn 
 
 #### Changes from level 1
 What's different from AddressBook-Level1:
+* Function that sorts list of all persons in addressbook.
 * Support for storing address (`a/`) and tags (`t/`)
 * Support for marking a contact detail as 'private' (`pa/`) (`pe/`) (`pp/`) 
 * View details of a person (`view` : shows non-private details), (`viewall` : shows all details)
