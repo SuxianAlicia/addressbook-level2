@@ -53,6 +53,7 @@
   add Carissa Beh p/666666 e/carissa@gmail.com a/666, campbell street t/friends
   list
   add Aaron Chan p/7777777 e/aaron@hotmail.com a/777, arab street t/besties
+  list
 
   # should not allow adding duplicate persons
   add Esther Potato p/555555 e/esther@not.a.real.potato pa/555, epsilon street t/tubers t/starchy
@@ -77,7 +78,7 @@
   # should catch invalid index
   view -1
   view 0
-  view 6
+  view 8
   viewall -1
   viewall 0
   viewall 8

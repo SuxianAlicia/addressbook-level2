@@ -19,6 +19,8 @@
 || Example: find alice bob charlie
 || list: Displays all persons in the address book as a list with index numbers.
 || Example: list
+|| sort: Sorts and displays all persons in the address book according to lexicographical order of their names.
+|| Example: sort
 || view: Views the non-private details of the person identified by the index number in the last shown person listing.
 || Parameters: INDEX
 || Example: view 1
@@ -210,7 +212,7 @@
 || Enter command: || [Command entered:  viewall 0]
 || The person index provided is invalid
 || ===================================================
-|| Enter command: || [Command entered:  viewall 6]
+|| Enter command: || [Command entered:  viewall 8]
 || The person index provided is invalid
 || ===================================================
 || Enter command: || [Command entered:  view 1]
@@ -303,7 +305,7 @@
 || Person could not be found in address book
 || ===================================================
 || Enter command: || [Command entered:  list]
-|| 	1. 1. Aaron Chan Phone: 7777777 Email: aaron@hotmail.com Address: 777, arab street Tags: [besties]
+|| 	1. Aaron Chan Phone: 7777777 Email: aaron@hotmail.com Address: 777, arab street Tags: [besties]
 || 	2. Adam Brown Phone: 111111 Email: adam@gmail.com Address: 111, alpha street Tags:
 || 	3. Betsy Choo Tags: [secretive]
 || 	4. Carissa Beh Phone: 666666 Email: carissa@gmail.com Address: 666, campbell street Tags: [friends]
