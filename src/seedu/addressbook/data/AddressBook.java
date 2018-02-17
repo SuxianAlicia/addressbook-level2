@@ -147,8 +147,8 @@ public class AddressBook {
             boolean newTagExists = allTags.contains(newTag);
 
             for (Person p: allPersons) {
-                boolean tagsChanged = p.checkPersonTagList(targetTag, newTag);
-                if (!newTagExists && tagsChanged) {
+                boolean hasTagsChanged = p.checkPersonTagList(targetTag, newTag);
+                if (!newTagExists && hasTagsChanged) {
                     syncTagsWithMasterList(p);
                     newTagExists = true;
                 }
