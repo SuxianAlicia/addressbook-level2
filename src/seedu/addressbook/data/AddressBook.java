@@ -130,7 +130,8 @@ public class AddressBook {
     }
 
     /**
-     * Sorts list of all person currently stored in addressbook, according to lexicographical order.
+     * Sorts list of all person currently stored in addressbook,
+     * according to lexicographical order of their names.
      */
     public void sortPersons() {
         allPersons.sortList();

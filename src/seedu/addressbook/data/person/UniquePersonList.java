@@ -143,7 +143,7 @@ public class UniquePersonList implements Iterable<Person> {
     }
 
     /**
-     * Sorts list of persons according to lexicographical order.
+     * Sorts list of persons according to lexicographical order of their names.
      */
     public void sortList() {
         Collections.sort(internalList);
