@@ -46,6 +46,8 @@ public class UtilsTest {
 
     @Test
     public void isAnyNull() throws Exception {
+        // no objects
+        assertNoNull();
 
         // at least one null object
         assertIsAnyNull((Object) null);
