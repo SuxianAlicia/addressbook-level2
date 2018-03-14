@@ -1,5 +1,6 @@
 package seedu.addressbook.data;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -24,6 +25,7 @@ public class AddressBook {
 
     private final UniquePersonList allPersons;
     private final UniqueTagList allTags; // can contain tags not attached to any person
+    private final ArrayList<Tagging> allTaggings;
 
     /**
      * Creates an empty address book.
@@ -31,6 +33,7 @@ public class AddressBook {
     public AddressBook() {
         allPersons = new UniquePersonList();
         allTags = new UniqueTagList();
+        allTaggings= new ArrayList<>();
     }
 
     /**
@@ -46,6 +49,7 @@ public class AddressBook {
         for (Person p : allPersons) {
             syncTagsWithMasterList(p);
         }
+        allTaggings = new ArrayList<>();
     }
 
     /**
@@ -119,6 +123,18 @@ public class AddressBook {
      */
     public UniqueTagList getAllTags() {
         return new UniqueTagList(allTags);
+    }
+
+    /**
+     * Returns message containing all Tagging messages in current session of AddressBook.
+     */
+    public String getAllTaggings() {
+        StringBuilder builder = new StringBuilder();
+        for(Tagging t: allTaggings) {
+            builder.append(t.getTaggingMessage());
+            builder.append("\n");
+        }
+        return builder.toString().trim();
     }
 
     @Override
